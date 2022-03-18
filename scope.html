@@ -1,0 +1,40 @@
+<script>
+    // var é globale, também local
+    // hoisting
+    console.log('> existe x antes do bloco? ', x)
+
+    {
+        var x = 7
+    }
+
+    
+    console.log('> existe x antes do bloco? ', x)
+
+    // Agora utilizando o Const e let
+
+    // Const e let são locais e só funcionam no scope onde foi criada 
+
+    //console.log('> existe y antes do bloco? ', y) se retirar a barra, dará erro, pois, não é local
+
+    let y = 1;
+
+    {
+
+        //console.log('> existe y? ', y) irá mudar a mensagem, pois detectará, mas não terá o valor
+        let y = 0 
+        console.log('> existe y? ', y)
+
+    }
+    
+    console.log('> existe y antes do bloco? ', y) 
+
+    const z = 0;
+
+    {
+        const z = 1 
+        console.log('> existe z? ', z) 
+    }
+
+    console.log('> existe z antes do bloco? ', z) 
+
+</script>
